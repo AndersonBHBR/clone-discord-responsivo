@@ -1,0 +1,274 @@
+@import url('reset.css');
+
+@import url('responsive.css');
+
+/*Início do Cabeçalho/Header*/
+
+body {
+    font-family: 'Luckiest Guy', 'Open Sans', sans-serif;
+    display: grid;
+    grid-template-rows: 31.6rem 35.8rem repeat(2, 31.6rem) 35rem 8rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "head"
+        "section1"
+        "section2"
+        "section3"
+        "section4"
+        "foot";
+}
+
+article {
+    grid-area: head;
+    background-image: url("../images/Header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    padding: 90px 300px;
+
+}
+
+article header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+article header h1 {
+    width: 318px;
+    margin: auto;
+    font-family: 'Luckiest Guy', sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+article header p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+article header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px; 
+}
+
+article header nav .windows,
+article header nav .discord {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    border-radius: 28px;
+    border: none;
+    padding: 16px 32px;
+    line-height: 21.79px;
+}
+
+article header nav .windows {  
+    color: #23272A;  
+    background-color: #FFFFFF;
+}
+
+article header nav .discord { 
+    color: #FFFFFF;
+    background-color: #23272A;
+}
+
+/*Fim do Cabeçalho/Header*/
+
+/*Início das Sections*/
+
+.formata_texto {
+    width: 348px;
+    height: 374px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    padding: 2.5rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.68rem;
+}
+
+.section-1 {
+    grid-area: section1;
+}
+
+.section-2 {
+    grid-area: section2;
+    background-color: #F6F6F6;
+}
+
+.section-3 {
+    grid-area: section3;
+}
+
+.section-4 {
+    grid-area: section4;
+    background-color: #F6F6F6;
+}
+
+section h2 { 
+    font-family: 'Open Sans', sans-serif;
+    color: #23272A;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    
+}
+
+section p {
+    margin-top: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: #23272A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.section-4 {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 1.5rem;
+    /*justify-content: center;
+    align-items: center;*/
+    gap: 1.6rem;
+}
+
+.section-4 h2 {
+    font-family: 'Luckiest Guy', sans-serif;
+    text-align: center;
+    width: 608px;
+    text-transform: uppercase;
+}
+
+.section-4 p{
+    width: 802px;
+}
+
+/*Fim das Sections*/
+
+/*Início do Rodapé/Footer*/
+
+footer {
+    grid-area: foot;
+    background-color: #23272A;
+    display: flex;
+    width: 100%;
+    padding: 36px 0px 36px 0px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; 
+}
+
+/*Fim do Rodapé/Footer*/
+
+
+/* Estilos para telas menores ou iguais a 768px de largura */
+@media (max-width: 768px) {
+    body {
+        grid-template-rows: 25rem 30rem repeat(2, 30rem) 82rem 8rem;
+        padding: 0;
+    }
+
+    article {
+        padding: 25px 24px;
+    }
+
+    article header {
+        padding: 0;
+        text-align: left;
+        justify-content: flex-start;
+    }
+
+    article header h1 {
+        width: 278px;
+        font-size: 32px;
+        text-align: left;
+        margin-left: 0;
+    }
+
+    article header p {
+        width: 381px; 
+        
+        font-size: 14px;
+        margin-bottom: 6px;
+        text-align: left;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    article header nav {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        justify-content: left;
+        align-items: normal;
+    }
+
+    article header nav .windows,
+    article header nav .discord {
+        padding: 12px 24px;
+        font-size: 14px;
+        width: 381px;
+        height: 54px;
+    }
+
+    .formata_texto {
+        width: 385px;
+        text-align: left;
+    }
+
+    section {
+        flex-direction: column;
+        padding: 2.5rem 1.5rem;
+
+        justify-content: center;
+        align-items: normal;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+
+    .section-2 {
+        flex-direction: column-reverse;
+    }
+
+    .section-4 h2 {
+        font-size: 32px;
+        width: 376px;
+        text-align: left;
+        align-items: normal;
+        justify-content: flex-start;
+    }
+
+    .section-4 p {
+        width: 376px;
+        font-size: 16px;
+    }
+
+    .section-1 img, 
+    .section-2 img, 
+    .section-3 img, 
+    .section-4 img {
+        width: 379px;
+        height: 252px; 
+    }
+}
+
+/* Estilos para telas menores ou iguais a 480px de largura */
